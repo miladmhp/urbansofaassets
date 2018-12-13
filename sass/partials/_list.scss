@@ -1,0 +1,140 @@
+section.list {
+	@media (min-width: 992px) and (orientation: portrait) {
+		padding: 60px 0;
+	}
+	@media (max-width: 991px) {
+		padding: 50px 0;
+	}
+
+
+	&.small {
+		ul li span {
+			display: inline-block;
+			width: 90%;
+			overflow: hidden;
+			white-space: nowrap;
+			font-size: 18px;
+			text-overflow: ellipsis;
+			line-height: 55px;
+			margin-top: -1px;
+		}
+
+		a {
+			line-height: 55px;
+			@media (min-width: 992px) {
+				&:last-child, &:nth-last-child(2) {
+					li {
+						border-bottom: 1px solid #dedede;
+					}
+				}
+			}
+			@media (max-width: 991px) {
+				&:last-child {
+					li {
+						border-bottom: 1px solid #dedede
+					}
+				}
+			}
+
+		}
+
+		a:hover, a:focus {
+			color: $accent;
+		}
+
+		ul li {
+			height: 55px;
+			font-size: 18px;
+
+			&:first-child {
+				height: 55px;
+			}
+
+			&:after {
+				content: '\f105';
+				font-family: fontawesome;
+				position: relative;
+				float: right;
+				font-size: $small-icon-size;
+				line-height: 55px;
+				padding-right: 0;
+				margin-top: -1px;
+				margin-right: 5px;
+			}
+		}
+	}
+
+	&:not(.small) {
+		ul li span {
+			@media (max-width: 991px) and (orientation: portrait) {
+				max-width: 50%;
+			}
+			max-width: 37%;
+		    text-overflow: ellipsis;
+		    overflow: hidden;
+		    display: inline-block;
+		    vertical-align: text-top;
+			font-size: 18px;
+			white-space: nowrap;
+		}
+
+		a {
+			@media (min-width: 768px) {
+				&:last-child, &:nth-last-child(2) {
+					li {
+						border-bottom: 1px solid #dedede;
+					}
+				}
+			}
+			@media (max-width: 767px) {
+				&:last-child {
+					li {
+						border-bottom: 1px solid #dedede;
+					}
+				}
+			}
+		}
+	}
+
+	ul {
+		list-style-type: none;
+		margin-bottom: 0;
+		padding: 0;
+
+		li {
+			height: 76px;
+			@media (max-width: 991px) and (orientation: portrait) {
+				height: 51px;
+			}
+			border-top: 1px solid #dedede;
+			margin-top: -1px;
+
+			img {
+				margin-right: 15px;
+				width: 150px;
+				height: 75px;
+				@media (max-width: 991px) and (orientation: portrait) {
+					width: 100px;
+					height: 50px;
+				}
+			}
+
+			&:after {
+				content: '\f105';
+				font-family: fontawesome;
+				position: relative;
+				float: right;
+				font-size: $small-icon-size;
+				line-height: 75px;
+				margin-right: 5px;
+				@media (max-width: 991px) and (orientation: portrait) {
+					line-height: 50px;
+				}
+			}
+		}
+
+		a:hover, a:focus {
+			color: $accent;
+		}
+	}
+}

@@ -1,0 +1,51 @@
+section.product-category {
+	.card {
+		@media (min-width: 992px) and (orientation: landscape) {
+			&:not(:nth-last-child(-n+2)) {
+				margin-bottom: 30px;
+			}
+		}
+		@media (max-width: 991px) {
+			&:not(:last-child) {
+				margin-bottom: 30px;
+			}
+		}
+		img {
+			width: 100%;
+		}
+
+		.caption {
+			padding: 15px;
+			border-top: none;
+			display: table;
+			background-color: $white-background;
+			width: 100%;
+			h3 {
+				text-align: center;
+				font-size: 18px;
+			}
+			& > span {
+				text-align: center;
+			    width: 100%;
+			    display: block;
+				color: $dark-grey;
+
+				.line-through {
+					text-decoration: line-through;
+				}
+			}
+		}
+		a {
+			&:hover {
+				.caption {
+					h3 {
+						color: $accent;
+					}
+					span {
+						color: $dark-grey;
+					}
+				}
+			}
+		}
+	}
+}

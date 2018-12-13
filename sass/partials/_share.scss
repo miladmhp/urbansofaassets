@@ -1,0 +1,107 @@
+section.share {
+    padding: 0 0 100px 0;
+	@media (max-width: 991px){
+        padding: 0 0 50px 0;
+	}
+	h4 {
+		margin-bottom: 0;
+	}
+
+	&.white-bg {
+		background-color: white;
+	}
+
+	.social-button {
+		display: flex;
+		justify-content: space-between;
+	}
+
+	.social-button a {
+		width: 25%;
+		@media (max-width: 767px) {
+			width: 18%;
+		}
+	    text-align: center;
+	    background-color: #f1f1f1;
+	    padding: 6px 10px;
+	    color: white;
+	    border-radius: 3px;
+		line-height: 35px;
+		align-self: center;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		@media (min-width: 768px) and (max-width: 991px) {
+			&:not(:first-child) {
+				margin-left: 20px;
+			}
+		}
+		@media (min-width: 992px) {
+			&:not(:first-child) {
+				margin-left: 50px;
+			}
+		}
+		span {
+			margin-top: -4px;
+			@media (max-width: 767px) {
+				display: none !important;
+			}
+		}
+
+		i {
+			font-size: 24px;
+			height: 100%;
+			margin-right: 10px;
+			@media (max-width: 768px) {
+				margin-right: 0px;
+			}
+		}
+
+		&.facebook {
+			background-color: #3b5998;
+		}
+
+		&.twitter {
+			background-color: #1da1f2;
+		}
+
+		&.pinterest {
+			background-color: #bd081c;
+		}
+
+		&.google {
+			background-color: #dd4b39;
+		}
+
+		&.whatsapp {
+			background-color: #25d366;
+			@media (min-width: 768px) {
+				display: none !important;
+			}
+		}
+	}
+
+	.keywords {
+		display: flex;
+		flex-flow: wrap;
+		.keyword {
+			cursor: pointer;
+			margin-right: 5px;
+			margin-top: 5px;
+			color: $dark;
+			text-decoration: none;
+			padding: 4px 10px 8px;
+			border: 1px solid #dedede;
+			transition: $regular-transition;
+			white-space: nowrap;
+			@media (max-width: 767px) {
+				white-space: normal;
+			}
+			&.active {
+				background-color: $btn-main-background-color;
+				color: $white;
+				border: 1px solid $light-grey;
+			}
+		}
+	}
+}

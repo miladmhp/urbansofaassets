@@ -1,0 +1,55 @@
+
+.tag_cloud {
+    margin: 0 auto;
+    display: block;
+    text-align: center;
+    position: relative;
+    @media (min-width: 576px) {
+        width: 450px;
+    }
+    @media (min-width: 767px) {
+        width: 500px;
+    }
+
+    .tag-item {
+        color: $accent;
+        display: inline-block;
+        white-space: nowrap;
+        margin-left: 15px;
+        font-family: "Ruluko" !important;
+        $aligns: middle, top, bottom;
+        $small-fonts: 1.18rem,1.25rem,1.31rem,1.37rem,1.43rem;
+        $medium-fonts: 1.75rem,1.81rem,1.875rem,1.93rem,2rem;
+        $large-fonts: 2.375rem,2.43rem,2.5rem,2.56rem,2.62rem;
+        $repeat: 30;
+        $margin-list: -10,-9,-8,-7,-6,-5,-4,-3,-2,-1,0,1,2,3,4,5,6,7,8,9,10;
+        $padding-list: 0,1,2,3,4,5,6,7,8,9,10;
+
+        @for $i from 1 through $repeat {
+            &:nth-child(#{length($aligns)}n+#{$i}) {
+                vertical-align: nth($aligns, random(length($aligns)));
+                margin-right: nth($margin-list, random(length($margin-list)))+px;
+                margin-top: nth($margin-list, random(length($margin-list)))+px;
+                padding-bottom: nth($padding-list, random(length($padding-list)))+px;
+                padding-left: nth($padding-list, random(length($padding-list)))+px;
+                &.small {
+                    font-size: nth($small-fonts, random(length($small-fonts)));
+                }
+                &.medium {
+                    font-size: nth($medium-fonts, random(length($medium-fonts)));
+                    margin-right: random(10) + px;
+                }
+                &.large {
+                    font-size: nth($large-fonts, random(length($large-fonts)));
+                    margin-right: random(10) + px;
+                }
+            }
+        }
+
+        @media (max-width: 576px) {
+            &:first-child {
+                margin-left: 0 !important;
+            }
+        }
+    }
+}

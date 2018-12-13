@@ -1,0 +1,46 @@
+@font-face {
+	font-family: 'Muli';
+	src: url('../fonts/Muli.ttf');
+}
+@font-face {
+	font-family: 'MuliBold';
+	src: url('../fonts/Muli-Bold.ttf');
+}
+@font-face {
+	font-family: 'MuliItalic';
+	src: url('../fonts/Muli-Italic.ttf');
+}
+@font-face {
+	font-family: 'MuliBoldItalic';
+	src: url('../fonts/Muli-BoldItalic.ttf');
+}
+
+@font-face {
+	font-family: "DidactGothic";
+	src: url("../fonts/DidactGothic-Regular.ttf");
+}
+
+@font-face {
+	font-family: "Ruluko";
+	src: url("../fonts/Ruluko.ttf");
+}
+.muli {
+	font-family: 'Muli';
+}
+.muli-bold {
+	font-family: 'MuliBold';
+}
+.muli-italic {
+	font-family: 'MuliItalic';
+}
+.muli-bold-italic {
+	font-family: 'MuliBoldItalic';
+}
+
+.didactGothic {
+	font-family: "DidactGothic" !important;
+}
+
+.ruluko {
+	font-family: "Ruluko" !important;
+}

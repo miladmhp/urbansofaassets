@@ -1,0 +1,85 @@
+section.product {
+
+	.owl-carousel {
+		margin: 20px 0 0 0;
+	}
+	.container .row div[class^='col-12 col-lg-6'] {
+		@media (min-width: 992px) and (orientation: landscape) {
+			&:nth-child(odd){
+				padding-left: 15px;
+				padding-right: 25px;
+			}
+			&:nth-child(even){
+				padding-left: 25px;
+				padding-right: 15px;
+			}
+		}
+		& a.btn.btn-light {
+			max-width: 576px;
+		}
+		& a.btn {
+			max-width: 576px;
+		}
+	}
+}
+.detail {
+	.more{
+		.more-description {
+			display: none;
+			visibility: hidden;
+			opacity: 0;
+			transition: $regular-transition;
+			animation: fadeInText 0.5s ease-out;
+		}
+		&.show {
+			.more-description {
+				display: block;
+				visibility: visible;
+				opacity: 1;
+				transition: $regular-transition;
+				margin-top: 0 !important;
+			}
+
+		}
+	}
+}
+.more{
+	p:first-child{
+		margin-bottom: 0;
+	}
+	.more-description {
+		display: none;
+		visibility: hidden;
+		opacity: 0;
+		transition: $regular-transition;
+		animation: fadeInText 0.5s ease-out;
+	}
+	&.show {
+		.more-description {
+			display: block;
+			visibility: visible;
+			opacity: 1;
+			transition: $regular-transition;
+			margin-top: 15px !important;
+			p:first-child{
+				margin-bottom: 15px;
+			}
+		}
+
+	}
+}
+
+@keyframes fadeInText {
+	0% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 1;
+	}
+}
+
+.show-more {
+	&:hover {
+		text-decoration: none !important;
+	}
+}

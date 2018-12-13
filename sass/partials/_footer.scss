@@ -1,0 +1,243 @@
+footer.footer-sm {
+	padding: 50px 0;
+	background-color: $accent;
+	color: rgba(255,255,255,0.8);
+	text-align: center;
+	@media (max-width: 991px) {
+		padding-left: 15px;
+		padding-right: 15px;
+		width: 100%;
+		bottom: 0;
+	}
+
+	@media (max-width: 576px) {
+		position: relative;
+	}
+
+	ul {
+		padding: 0;
+		margin: 0;
+		list-style-type: none;
+	}
+
+	a {
+		color: rgba(255,255,255,0.8);
+		text-decoration: none;
+		&:hover {
+			color: $white;
+		}
+	}
+
+	p {
+		color: rgba(255,255,255,0.8);
+	}
+	.rating {
+		color: #e7711b;
+	}
+	@media (min-width: 992px) {
+		display: none;
+	}
+}
+
+// Tablet Portrait
+@media (min-width: $tablet-min) and (orientation: portrait) {
+	footer p br {
+		display: none;
+	}
+}
+
+footer.footer-lg {
+	padding: $large-padding 0;
+	@media (max-width: 1200px) and (orientation: landscape) {
+		padding: $regular-padding 0;
+	}
+	//@media only screen
+	//and (min-device-width : 768px)
+	//and (max-device-width : 1024px) {
+	//	position: absolute;
+	//	width: 100%;
+	//	bottom: 0;
+	//}
+	background-color: $accent;
+	width: 100vw;
+	color: $light-grey;
+	text-align: center;
+	.footer-col {
+		text-align: left;
+		.footer-col-title {
+			font-size: 1.2rem;
+			font-weight: 600;
+			color: #fff;
+			margin-bottom: 1rem;
+		}
+
+		.footer-col-content{
+			p {
+				color: rgba(255,255,255,0.8);
+				a {
+					color: rgba(255,255,255,0.8) !important;
+					transition: all ease 0.3s;
+					&:hover {
+						color: $white !important;
+						transition: all ease 0.3s;
+						text-decoration: underline;
+						i {
+							text-decoration: none !important;
+							color: $white;
+						}
+					}
+				}
+				.rating {
+					color: #e7711b;
+				}
+			}
+			ul {
+				padding: 0;
+				margin: 0;
+				list-style-type: none;
+				li {
+					a:not(.withLinkItem) {
+						color: rgba(255,255,255,0.8);
+						transition: all ease 0.3s;
+						&:hover {
+							color: $white !important;
+							transition: all ease 0.3s;
+							text-decoration: underline;
+							i {
+								text-decoration: none !important;
+								color: $white;
+							}
+						}
+					}
+
+				}
+
+				&.call-info {
+					li {
+						margin-bottom: 10px;
+						a, span {
+							display: flex;
+							align-items: flex-start;
+							color: rgba(255,255,255,0.8);
+							i{
+								margin-right: 20px;
+								font-size: 24px;
+							}
+						}
+						a:hover {
+							color: $white;
+							transition: all ease 0.3s;
+							span {
+								text-decoration: underline !important;
+							}
+							i {
+								text-decoration: none !important;
+								color: $white;
+							}
+						}
+
+					}
+				}
+
+				&.social-links {
+					display: flex;
+					flex-direction: row;
+					li{
+						a i {
+							font-size: 24px;
+						}
+						&:not(:first-child) {
+							margin-left: 20px;
+						}
+					}
+
+				}
+			}
+
+			.form-group {
+				position: relative;
+				color: $white;
+				.form-control {
+					background: none;
+					border: 1px solid rgba(255,255,255,0.5);
+					border-radius: 0px;
+					padding: 0.7rem;
+					color: $white;
+					&::placeholder {
+						color: rgba(255,255,255,0.8);
+					}
+					&:focus {
+						border-color: $white;
+                        box-shadow: none;
+						outline: none;
+                    }
+				}
+				button {
+					background: none;
+					border: none;
+					color: rgba(255,255,255,0.8);
+					position: absolute;
+					right: 8px;
+					font-size: 24px;
+					top: 4px;
+					transition: all 0.3s ease;
+					cursor: pointer;
+
+					&:hover {
+						color: $white;
+					}
+				}
+			}
+
+		}
+	}
+
+	.bottom-bar {
+		background: rgba(255, 255, 255, 0.1);
+		padding: 30px 0;
+		margin-bottom: -60px;
+		margin-top: 60px;
+		@media (max-width: 1200px) and (orientation: landscape) {
+			margin-bottom: -50px;
+			margin-top: 50px;
+		}
+		display: flex;
+		align-items: center;
+		p{
+			color: rgba(255,255,255,0.8);
+		}
+		ul.bottom-bar-links {
+			display: flex;
+			list-style: none;
+			justify-content: flex-start;
+			margin-bottom: 0;
+			padding-left: 0;
+            flex-flow: wrap;
+			li  {
+
+				a {
+					white-space: nowrap;
+					margin-left: 25px;
+					font-weight: 500;
+					color: rgba(255,255,255,0.8);
+					transition: all ease 0.3s;
+					&:hover {
+						color: $white;
+						transition: all ease 0.3s;
+						text-decoration: underline;
+					}
+				}
+			}
+		}
+		.safari-col {
+			@media (min-width: 992px) and (max-width: 1200px) and (orientation: landscape) {
+				padding-top: 30px;
+				padding-bottom: 30px;
+			}
+		}
+	}
+	@media (max-width: 991px) {
+		display: none;
+	}
+}
+

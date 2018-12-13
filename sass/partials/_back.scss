@@ -1,0 +1,14 @@
+// Back Button
+section.back, div.back {
+	a {
+		display: inline-block;
+		padding-bottom: $small-padding;
+		width: 100%;
+		border-bottom: 1px solid #f0f0f0;
+
+		i {
+			padding-right: 15px;
+		}
+	}
+}
+

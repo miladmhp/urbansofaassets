@@ -1,0 +1,41 @@
+// Store Information
+section.dealer-info {
+
+	.info-item {
+		display: flex;
+		img {
+			width: 15px;
+			height: auto;
+			margin-left: 5px;
+			vertical-align: middle;
+			padding-bottom: 4px;
+		}
+
+		strong {
+			font-size: $large-font-size;
+		}
+
+		span:nth-child(1) {
+			display: inline-block;
+			text-align: left;
+			vertical-align: top;
+			padding-right: 10px;
+
+			i {
+				font-size: $regular-icon-size;
+			}
+		}
+		span:nth-child(2) {
+			display: inline-block;
+		}
+		i {
+			color: $dark;
+		}
+
+		&.col-lg-6 {
+			@media (max-width: 991px) {
+				margin-bottom: 30px;
+			}
+		}
+	}
+}

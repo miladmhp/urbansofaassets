@@ -1,0 +1,116 @@
+// Contact Information
+section.contact {
+
+	.contact-item {
+		span:nth-child(1) {
+			display: inline-block;
+			text-align: left;
+			vertical-align: top;
+			padding-right: 10px;
+
+			i {
+				font-size: $regular-icon-size;
+			}
+		}
+		span:nth-child(2) {
+			display: inline-block;
+		}
+		i {
+			color: $dark;
+		}
+	}
+
+	.social-links > a {
+		margin-right: 20px;
+
+		i {
+			font-size: $regular-icon-size;
+		}
+	}
+}
+
+
+/*toaster*/
+.hide {
+	display: none !important;
+}
+
+.show {
+	display: block !important;
+}
+
+.form-message {
+	position: fixed;
+	z-index: 990;
+	bottom: 70px;
+	right: 20px;
+	top: auto;
+	left: auto;
+	width: 500px;
+	max-width: 100%;
+	padding: 20px;
+	border: 1px solid #ccc;
+	border-radius: $border-radius;
+	color: #fff;
+	box-shadow: 0 0 2px 0px rgba(0,0,0,.1), 0 3px 10px rgba(0,0,0,.2);
+	@include transition(0.3s);
+	transform: translate(0, 20px);
+	opacity: 0;
+	filter: alpha(opacity=0);
+	visibility: hidden;
+}
+
+.form-message.show {
+	transform: translate(0, 0);
+	opacity: 1;
+	filter: alpha(opacity=100);
+	visibility: visible;
+}
+
+.form-message.success {
+	border-color: $form-message-success-text-color;
+	background-color: $form-message-success-background-color;
+	font-weight: bold;
+	color: $form-message-success-text-color;
+}
+
+.form-message.fail {
+	border-color: $form-message-fail-text-color;
+	background-color: $form-message-fail-background-color;
+}
+
+.form-message.fail ul {
+	padding: 0;
+	margin: 0;
+	list-style: none;
+}
+
+.form-message.fail ul > li {
+	color: $form-message-fail-text-color;
+	display: block;
+}
+
+.form-message.fail ul > li:not(:last-child) {
+	margin-bottom: 5px;
+}
+@media (max-width: 767px) {
+	.form-message {
+		top: 70px;
+		bottom: auto;
+		right: auto;
+		left: 15px;
+		width: -webkit-calc(100% - 30px);
+		width: calc(100% - 30px);
+	}
+}
+
+.form-message-close {
+	position: absolute;
+	top: 0;
+	right: 0;
+	cursor: pointer;
+	width: 30px;
+	height: 30px;
+	line-height: 30px;
+	text-align: center;
+}

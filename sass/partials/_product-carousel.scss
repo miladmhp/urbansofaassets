@@ -1,0 +1,46 @@
+section.product-carousel {
+
+	&:not(.white-bg) {
+		.owl-carousel .caption {
+			border: none;
+		}
+	}
+
+	.owl-carousel {
+		margin: 20px 0 0 0;
+
+        .item {
+            &:hover {
+                .caption {
+                    h3 {
+                        color: $accent;
+                    }
+                    span {
+                        color: $dark-grey;
+                    }
+                }
+            }
+        }
+
+		.caption {
+			padding: 20px;
+			border: 1px solid #dedede;
+			border-top: none;
+			background-color: $white-background;
+
+			h3 {
+				text-align: center;
+			}
+			& > span {
+				text-align: center;
+			    width: 100%;
+			    display: block;
+				color: $dark-grey;
+
+				.line-through {
+					text-decoration: line-through;
+				}
+			}
+		}
+	}
+}

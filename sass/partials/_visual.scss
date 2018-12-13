@@ -1,0 +1,87 @@
+section.visual {
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center;
+	height: 60vh;
+	position: relative;
+	margin-top: -1px;
+	max-height: 600px;
+	@media (max-width: 991px) {
+		margin-top: 86px;
+	}
+	padding: 0 !important;
+	@media (max-width: 576px) {
+		height: 280px;
+	}
+
+	.caption {
+		position: absolute;
+		bottom: 0;
+		left: 0;
+		padding: 0 15px 0px 15px;
+		color: $light-grey;
+
+		h2 {
+			color: $white;
+			@media (min-width: 992px) {
+				font-size: 32px;
+			}
+		}
+	}
+
+	.visual-carousel {
+		height: 60vh;
+		max-height: 600px;
+		@media (max-width: 576px) {
+			height: 280px;
+		}
+		.item {
+			height: 60vh;
+			@media (max-width: 576px) {
+				height: 280px;
+			}
+			background-size: cover;
+			background-repeat: no-repeat;
+			background-position: center;
+			display: flex;
+			align-items: flex-end;
+			padding-bottom: 50px;
+			max-height: 600px;
+			.cover-content {
+				p {
+					color: $white;
+					font-size: 28px;
+					@media (max-width: 991px) {
+						font-size: 20px;
+					}
+					margin-bottom: 25px;
+				}
+				a {
+					font-size: 30px;
+					border-radius: 0;
+					background: rgba(75, 117, 102, 0.56);
+					padding: 0.8rem 4rem;
+					font-family: Ruluko;
+					color: white;
+					@media (max-width: 991px) {
+						font-size: 20px;
+						padding: 0.6rem 2rem;
+					}
+					&:hover {
+						background-color: rgba(75, 117, 102, 0.66);
+					}
+				}
+			}
+		}
+		.owl-nav .owl-prev, .owl-nav .owl-next{
+			top: 51%;
+		}
+	}
+}
+
+// Tablet Portrait
+@media (min-width: $tablet-min) and (orientation: portrait) {
+	section.visual {
+		height: 60vh;
+	}
+}

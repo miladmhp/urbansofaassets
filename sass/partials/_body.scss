@@ -1,0 +1,80 @@
+html {
+	height: 100% !important;
+}
+body {
+	background-color: $white-background;
+	transition: all 0.45s ease;
+	font-family: 'Muli';
+	overflow-x: hidden;
+	width: 100%;
+	position: relative;
+	min-height: 100vh;
+
+	&.no-scroll {
+		overflow: hidden !important;
+	}
+
+	&.open {
+		margin-left: 75vw;
+
+		nav {
+			margin-left: 75vw;
+		}
+
+		nav .menu {
+			left: 0;
+		}
+	}
+
+	&.open-right {
+		margin-left: 0;
+	}
+}
+
+body {
+	&:after {
+		content: '';
+		position: fixed;
+		left: 0;
+		top: 0;
+		width: 100%;
+		z-index: 101;
+		height: 100vh;
+		background-color: rgba(0, 0, 0, 0.5);
+		opacity: 0;
+		transition: all 0.45s ease;
+		visibility: hidden;
+	}
+	&.open:after {
+		opacity: 1;
+		visibility: visible;
+		left: 75vw;
+	}
+
+	&.open-right:after {
+		opacity: 1;
+		visibility: visible;
+		left: 0;
+	}
+}
+
+// Tablet Portrait
+@media (min-width: $tablet-min) and (orientation: portrait) {
+	body.open {
+		margin-left: 45vw;
+
+		nav {
+			margin-left: 45vw;
+		}
+	}
+	body.open:after {
+		right: 45vw;
+	}
+
+	body.open-right {
+		margin-left: 0;
+	}
+	body.open-right:after {
+		right: 0;
+	}
+}
